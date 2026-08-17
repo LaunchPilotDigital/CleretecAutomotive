@@ -1,0 +1,7 @@
+# Design/source material not needed in the deployed site
+DONT USE/
+Assets/
+
+# OS cruft
+.DS_Store
+Thumbs.db
