@@ -178,14 +178,14 @@ section.gallery .section-title {
 .site-header__inner {
   max-width: var(--container);
   margin: 0 auto;
-  padding: 12px 24px;
+  padding: 8px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
 }
 
-.brand__logo { height: 40px; width: auto; }
+.brand__logo { height: 60px; width: auto; }
 
 .nav {
   display: flex;
@@ -815,7 +815,7 @@ section.gallery .section-title {
 
   .nav {
     position: fixed;
-    top: 65px;
+    top: 77px;
     left: 0;
     right: 0;
     background: var(--bg);
