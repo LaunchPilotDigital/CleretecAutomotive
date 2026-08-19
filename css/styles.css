@@ -355,7 +355,8 @@ section.gallery .section-title {
 .page-hero__content {
   position: relative;
   z-index: 1;
-  padding: 90px 0 44px;
+  padding-top: 90px;
+  padding-bottom: 44px;
 }
 .page-hero .eyebrow { margin-bottom: 10px; }
 .page-hero h1 {
@@ -613,6 +614,57 @@ section.gallery .section-title {
   font-size: 0.9rem;
 }
 
+/* ---------------- Fleet vehicles (highlighted) ---------------- */
+.fleet { padding: 100px 0; }
+.fleet__panel {
+  background:
+    linear-gradient(135deg, rgba(200,16,46,0.16) 0%, rgba(200,16,46,0.03) 55%),
+    var(--bg-alt);
+  border: 1px solid rgba(200,16,46,0.4);
+  border-radius: 20px;
+  padding: 56px;
+  box-shadow: 0 30px 70px -35px rgba(200,16,46,0.35);
+}
+.fleet__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--ff-head);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+.fleet__tag svg { flex-shrink: 0; }
+.fleet__badge {
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius);
+  padding: 50px 30px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 25px 55px -20px rgba(200,16,46,0.65);
+}
+.fleet__badge svg { color: #fff; margin-bottom: 16px; }
+.fleet__badge p {
+  font-family: var(--ff-head);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.fleet__badge span {
+  display: block;
+  margin-top: 6px;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
+}
+
 /* ---------------- Why: secondary strip ---------------- */
 .why-strip {
   padding: 100px 0;
@@ -646,6 +698,13 @@ section.gallery .section-title {
   padding: 110px 0 120px;
   text-align: center;
 }
+.contact-block__phones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin: 20px 0 10px;
+}
 .contact-block__phone {
   display: inline-flex;
   align-items: center;
@@ -654,7 +713,6 @@ section.gallery .section-title {
   font-size: clamp(2.4rem, 7vw, 4rem);
   font-weight: 700;
   color: var(--text);
-  margin: 20px 0 10px;
 }
 .contact-block__phone svg { color: var(--accent); flex-shrink: 0; }
 .contact-block__note {
@@ -670,9 +728,9 @@ section.gallery .section-title {
 }
 .contact-info {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 .contact-info div {
@@ -727,8 +785,8 @@ section.gallery .section-title {
 }
 .footer__inner {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1.4fr 1fr 0.9fr 1fr 1fr;
+  gap: 32px;
   padding-bottom: 50px;
 }
 .footer__logo { height: 42px; width: auto; margin-bottom: 16px; }
@@ -807,12 +865,11 @@ section.gallery .section-title {
   .footer__brand { grid-column: 1 / -1; }
   .area-cards { grid-template-columns: repeat(2, 1fr); }
   .why-strip__grid { grid-template-columns: 1fr 1fr; }
-  .contact-info { grid-template-columns: 1fr; }
+  .contact-info { grid-template-columns: 1fr 1fr; }
+  .fleet__panel { padding: 40px 28px; }
 }
 
-@media (max-width: 760px) {
-  .brands-strip__names { gap: 10px 14px; font-size: 0.95rem; }
-
+@media (max-width: 1022px) {
   .nav {
     position: fixed;
     top: 77px;
@@ -840,6 +897,10 @@ section.gallery .section-title {
   }
   .nav-toggle { display: flex; }
   .header__actions .btn--sm { display: none; }
+}
+
+@media (max-width: 760px) {
+  .brands-strip__names { gap: 10px 14px; font-size: 0.95rem; }
 
   .hero { min-height: 100vh; }
   .hero__actions { flex-direction: column; align-items: stretch; }
@@ -864,4 +925,20 @@ section.gallery .section-title {
   .contact-block__phone { flex-direction: column; gap: 8px; }
   .contact-block__actions { flex-direction: column; align-items: stretch; }
   .contact-block__actions .btn { justify-content: center; }
+}
+
+/* ---------------- Large / 4K screens ---------------- */
+@media (min-width: 1600px) {
+  :root { --container: 1360px; }
+  html { font-size: 17.5px; }
+}
+
+@media (min-width: 2200px) {
+  :root { --container: 1640px; }
+  html { font-size: 20px; }
+}
+
+@media (min-width: 3000px) {
+  :root { --container: 1960px; }
+  html { font-size: 23px; }
 }
